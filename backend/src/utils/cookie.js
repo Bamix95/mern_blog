@@ -6,7 +6,7 @@ export const setTokenCookie = (res, token) => {
   res.cookie("token", token, {
     httpOnly: true,
     secure: Env.IS_PRODUCTION,
-    sameSite: Env.IS_PRODUCTION ? "strict" : "lax",
+    sameSite: "none",
     maxAge: ONE_DAY,
     path: "/",
   });
@@ -16,7 +16,7 @@ export const clearTokenCookie = (res) => {
   res.clearCookie("token", {
     httpOnly: true,
     secure: Env.IS_PRODUCTION,
-    sameSite: Env.IS_PRODUCTION ? "strict" : "lax",
+    sameSite: "none",
     expires: new Date(0),
     path: "/",
   });
