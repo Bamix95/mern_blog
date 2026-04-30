@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:wght@400;500;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* ── Fonts ── */
+  --font-body: "Inter", sans-serif;
+  --font-display:
+    "Playfair Display", Georgia, serif; /* headings, hero titles, article titles */
+
+  /* ── Page backgrounds ── */
+  --color-page-bg: #faf9f6; /* main page/navbar background — warm off-white */
+  --color-surface: #f5f2ec; /* subtle raised areas — stat boxes, tab bar, blockquotes */
+  --color-card: #ffffff; /* form inputs, auth card, elevated components */
+
+  /* ── Text ── */
+  --color-text-primary: #1a1a18; /* headings, nav links, strong text */
+  --color-text-body: #2a2a26; /* article body copy — slightly softer than primary */
+  --color-text-muted: #7a7870; /* dates, read times, labels, secondary info */
+
+  /* ── Borders & dividers ── */
+  --color-border: #e0ded8; /* all dividers, input borders, card outlines */
+
+  /* ── Accent ── */
+  --color-accent: #c94a2e; /* category tags, featured pill, publish button, blockquote border */
+
+  /* ── Tags / Pills ── */
+  --color-tag-bg: #f0ede6; /* tag/pill background */
+  --color-tag-text: #5a5750; /* tag/pill text */
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100dvh;
+  background-color: var(--color-page-bg);
+  color: var(--color-text-primary);
+}
