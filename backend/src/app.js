@@ -9,6 +9,8 @@ import commentRoutes, { commentDeleteRouter } from "./routes/comment.routes.js";
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 applySecurityMiddleware(app);
 
 app.get("/api/health", (_req, res) => {
